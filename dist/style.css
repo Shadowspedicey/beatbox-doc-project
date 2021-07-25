@@ -87,7 +87,7 @@ img
 	padding: 0.5rem;
 }
 
-@media (max-width: 950px)
+@media (max-device-width: 950px)
 {
 	#navbar
 	{
