@@ -3,18 +3,61 @@ body
 	margin: 0;
 }
 
+.hidden
+{
+	display: none !important;
+}
+
 #navbar
 {
+	background: #D3D3D3;
+
 	display: flex;
 	flex-direction: column;
+
 	position: fixed;
 	left: 0;
 	top: 0;
 	
-	background: #D3D3D3;
-	height: 100%;
-	
 	border-right: 2px solid black;
+}
+
+#dropdown
+{
+	width: min-content;
+	height: min-content;
+	cursor: pointer;
+
+	font-size: 5rem;
+
+	align-self: center;
+
+	border: 2px solid black;
+}
+
+#dropdown-menu
+{
+	list-style-type: none;
+	transform-origin: top;
+	transform: scaleY(0);
+
+	transition: transform 350ms;
+
+	position: relative;
+	top: 0;
+	bottom: 100%;
+
+	margin: 0;
+	padding: 0;
+}
+.down
+{
+	transform: scaleY(100%) !important;
+}
+#dropdown-menu li
+{
+	padding: 1rem 0;
+	border-top: 2px solid black;
 }
 
 #navbar header h1
@@ -36,7 +79,6 @@ body
 	text-decoration: none;
 	
 	padding-left: 1rem;
-	border-top: 2px solid black;
 }
 
 #main-doc
@@ -87,7 +129,7 @@ img
 	padding: 0.5rem;
 }
 
-@media (max-device-width: 950px)
+@media (max-device-width: 2000px)
 {
 	#navbar
 	{
